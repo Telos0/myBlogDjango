@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-an!zd!8x_guf0#9=p-upmudb*q-54qu8t0ycxf1@i85qbc*xj^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['192.168.56.101', 'localhost', '127.0.0.1', 'devwebappdjangoinstance01.azurewebsites.net']
 
 # Application definition
 
@@ -112,11 +111,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
