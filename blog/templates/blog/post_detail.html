@@ -21,7 +21,13 @@
                             <h5 class="text-muted">{{ post.hook_text }}</h5>
                             {% endif %}
                             <!-- Post meta content-->
-                            <div class="text-muted fst-italic mb-2">{{ post.created_at }} : {{ post.author | upper }}</div>
+                            <hr>
+                            <div class="text-muted fst-italic mb-2">{{ post.created_at }} : {{ post.author | upper }}
+                            {% if user.is_authenticated and user == post.author %}
+                                <a class="btn btn-info btn-sm float-right" href="/blog/update_post/{{ post.pk }}" role="button"><i class="fas fa-pen"></i> Edit Post</a>
+                            {% endif %}
+                            <hr>
+                            </div>
                             <!-- Post categories-->
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
@@ -35,7 +41,14 @@
                         <!-- Post content-->
                         <section class="mb-5">
                             <p class="fs-5 mb-4">{{ post.content }}</p>
-
+                            {% if post.tags.exists %}
+                            <i class="fas fa-tags"></i>
+                            {% for tag in post.tags.all %}
+                                <a href="{{ tag.get_absolute_url }}"><span class="badge badge-pill badge-light">{{ tag }}</span></a>
+                            {% endfor %}
+                            <br/>
+                            <br/>
+                        {% endif %}
                             {% if post.file_upload %}
                                 <a href="{{ post.file_upload.url }}" class="btn btn-outline-dark" role="button" download>Download:
 
