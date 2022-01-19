@@ -4,3 +4,4 @@ psycopg2-binary
 Pillow
 mysqlclient
 django-crispy-forms
+django-markdownx
