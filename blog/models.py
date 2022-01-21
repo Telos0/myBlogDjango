@@ -58,6 +58,7 @@ class Post(models.Model):
 
 class RunningServices(models.Model):
     name = models.CharField(max_length=30)
+    description = models.CharField(max_length=200, null=True)
     url = models.URLField(max_length=200, null=True)
     runningYN = models.BooleanField()
 

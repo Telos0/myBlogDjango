@@ -19,9 +19,12 @@
                     <h2 class="text-light">In Service App</h2>
                     {% for service in running_services %}
                         <div class="card mt-1">
-                            <div class="card body">
-                                <h6><a href="{{ service.url }}" class="text-decoration-none text-dark">{{ service.name }}</a> </h6>
-                                <span class="badge badge-pill badge-light float-right">Running : {{ service.runningYN }}</span>
+                            <div class="card body mt-1">
+                                <h5><a href="{{ service.url }}" class="text-decoration-none text-dark">&nbsp;&nbsp;{{ service.name }}</a> </h5>
+                                <p>&nbsp; {{ service.description }}</p>
+                                <div class="float:right">
+                                    <span class="badge rounded-pill badge-success" >&nbsp;&nbsp;Running : {{ service.runningYN }}&nbsp;&nbsp;</span>
+                                </div>
                             </div>
                         </div>
                     {% endfor %}

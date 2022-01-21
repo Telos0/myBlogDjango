@@ -1,20 +1,63 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>개발자 이경서입니다!</title>
-</head>
-<body>
+{% extends 'single_pages/base_about_me.html' %}
+{% load static %}
+{% block head_title %}
+   About Telos
+{% endblock %}
 
-    <nav>
-        <a href="/blog/">Blog</a>
-        <a href="/about_me/">About_me</a>
-    </nav>
+{% block main_area %}
+    <section>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>안녕하세요 이경서입니다.</h1>
+                    <hr>
+                    <P>어쩌구 저쩌구 이것 저것 디자인이 제일 힘드네요</P>
+                </div>
+                <div class="col-lg-4">
+                    <P>이미지 자리입니다.</P>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col=12">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card body">
+                            <h5 class="card-title">MLB 머신러닝</h5>
+                            <P>블라블라블라</P>
+                        </div>
+                    </div>
+                </div>
 
-    <h1>안녕하세요 이경서입니다.</h1>
-    <h2>이력</h2>
-    <h2>Portfolio</h2>
-    <h3>아직 채우는 중 입니다.</h3>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card body">
+                            <h5 class="card-title">OpenCv 이용한 영상딥러닝</h5>
+                            <P>블라블라블라</P>
+                        </div>
+                    </div>
+                </div>
 
-</body>
-</html>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card body">
+                            <h5 class="card-title">Django Web 개발 with Azure</h5>
+                            <P>블라블라블라</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+{% endblock %}
