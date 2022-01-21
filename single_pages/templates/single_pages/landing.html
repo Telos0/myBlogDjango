@@ -17,16 +17,14 @@
 
                 <div class="col-lg-5 mt-5">
                     <h2 class="text-light">In Service App</h2>
-                    <div class="card mt-1">
-                        <div class="card body">
-                            running
+                    {% for service in running_services %}
+                        <div class="card mt-1">
+                            <div class="card body">
+                                <h6><a href="{{ service.url }}" class="text-decoration-none text-dark">{{ service.name }}</a> </h6>
+                                <span class="badge badge-pill badge-light float-right">Running : {{ service.runningYN }}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card mt-1">
-                        <div class="card body">
-                            running
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
 
             </div>

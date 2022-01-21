@@ -56,3 +56,11 @@ class Post(models.Model):
     def get_content_markdown(self):
         return markdown(self.content)
 
+class RunningServices(models.Model):
+    name = models.CharField(max_length=30)
+    url = models.URLField(max_length=200, null=True)
+    runningYN = models.BooleanField()
+
+    def __str__(self):
+        return f'{self.name} : {self.url}'
+
