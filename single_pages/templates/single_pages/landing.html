@@ -25,7 +25,11 @@
                                 <h5><a href="{{ service.url }}" class="text-decoration-none text-dark">&nbsp;&nbsp;{{ service.name }}</a> </h5>
                                 <p>&nbsp; {{ service.description }}</p>
                                 <div class="float:right">
-                                    <span class="badge rounded-pill badge-success" >&nbsp;&nbsp;Running : {{ service.runningYN }}&nbsp;&nbsp;</span>
+                                    {% if service.runningYN == 1 %}
+                                        <span class="badge rounded-pill badge-success" >&nbsp;&nbsp;Running : {{ service.runningYN }}&nbsp;&nbsp;</span>
+                                    {% else %}
+                                        <span class="badge rounded-pill badge-danger" >&nbsp;&nbsp;Running : {{ service.runningYN }}&nbsp;&nbsp;</span>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
