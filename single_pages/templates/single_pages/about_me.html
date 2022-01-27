@@ -11,46 +11,66 @@
                 <div class="col-lg-8">
                     <h1>안녕하세요 이경서입니다.</h1>
                     <hr>
-                    <P>어쩌구 저쩌구 이것 저것 디자인이 제일 힘드네요</P>
+                    <p class="lead">수학을 전공한 개발자입니다.<br/>
+                        철학을 좋아하고 한아이의 아빠입니다.
+                    </p>
+                    <ul>
+                        <li>Work Experience</li>
+                        <ul>
+                            <li>LG CNS - 개발/분석/설계 (2019.1 ~)</li>
+                        </ul>
+
+                        <li>Education</li>
+                        <ul>
+                            <li>이학학사, 수리과학, kaist(2012 ~ 2016)</li>
+                        </ul>
+
+                        <li>Certificate</li>
+                        <ul>
+                            <li>Tensorflow Deverloper Certificate, Google</li>
+                            <li>Azure Fundamental(AZ-900), MS</li>
+                        </ul>
+                    </ul>
                 </div>
                 <div class="col-lg-4">
-                    <P>이미지 자리입니다.</P>
+                    <img class="img-fluid" src="https://blobstorageforpydev.blob.core.windows.net/devdjango01/20220105_164751.jpg">
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="bd-light margin-for-footer">
         <div class="container">
             <div class="row">
                 <div class="col=12">
-                    <h1>Portfolio</h1>
+                    <h1>Portfolio - Github</h1>
+                    <a href="https://github.com/Telos0?tab=repositories">Github Link</a>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card" data-target="#MLBmodal" data-toggle="modal">
                         <div class="card body">
-                            <h5 class="card-title">MLB 머신러닝</h5>
-                            <P>블라블라블라</P>
+                            <h5 class="card-title">MLB 머신러닝(MLB_pitcher)</h5>
+                            <P>MLB 2015~2018 투구데이터를 통한 통계분석/예측</P>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card" data-target="#CNNmodal" data-toggle="modal">
                         <div class="card body">
-                            <h5 class="card-title">OpenCv 이용한 영상딥러닝</h5>
-                            <P>모달로 클릭하면 팝업 추가 합시다.</P>
+                            <h5 class="card-title">OpenCv 이용한 영상딥러닝(Cam_CNN)</h5>
+                            <P>OpenCV를 이용한 영상처리, keras를 이용한 이미지러닝을 통한 이미지 식별</P>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card" data-target="#Djangomodal" data-toggle="modal">
                         <div class="card body">
-                            <h5 class="card-title">Django Web 개발 with Azure</h5>
-                            <P>블라블라블라</P>
+                            <h5 class="card-title">Django Web 개발 with Azure(myBlogDjango, foodRecipecheker)</h5>
+                            <P>Django를 이용한 웹앱, AzureWebApp + Azure DB for mysql + Azure Storage Account-blob 사용</P>
                         </div>
                     </div>
                 </div>
@@ -60,4 +80,87 @@
 
     </section>
 
+<!-- Modal -->
+<div class="modal fade" id="MLBmodal" tabindex="-1" role="dialog" aria-labelledby="MLBmodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="MLBmodalLabel">MLB 머신러닝(MLB_pitcher)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <!--<img class="img-fluid" src="">-->
+                    </div>
+                    <div class="col-lg-5">
+                        <p>MLB 2015~2018 투구데이터를 통한 통계분석/예측</p>
+                        <a href="https://github.com/Telos0/MLB_pitcher">GithubLink</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="CNNmodal" tabindex="-1" role="dialog" aria-labelledby="CNNmodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="CNNmodalLabel">OpenCv 이용한 영상딥러닝(Cam_CNN)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <!--<img class="img-fluid" src="">-->
+                    </div>
+                    <div class="col-lg-5">
+                        <p>OpenCV를 이용한 영상처리, keras를 이용한 이미지러닝을 통한 이미지 식별</p>
+                        <a href="https://github.com/Telos0/Cam_CNN">GithubLink</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="Djangomodal" tabindex="-1" role="dialog" aria-labelledby="DjangomodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DjangomodalLabel">Django Web 개발 with Azure(myBlogDjango, foodRecipecheker)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <!--<img class="img-fluid" src="">-->
+                    </div>
+                    <div class="col-lg-5">
+                        <p>Django를 이용한 웹앱, AzureWebApp + Azure DB for mysql + Azure Storage Account-blob 사용</p>
+                        <a href="https://github.com/Telos0/myBlogDjango">GithubLink</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
