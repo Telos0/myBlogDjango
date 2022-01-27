@@ -7,10 +7,12 @@ from django.utils.text import slugify
 from .forms import CommentForm
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
+import datetime
 
 
 # Create your views here.
-
+BLOB_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=blobstorageforpydev;AccountKey=ZJFb+5et4ROFCebrFvpNhWV9eT4cN68Uwa2wwjXPMeKsRhXTHmfDHKAbUO9wEr1gaDVQY+JKj8YGzwAEm+NINw==;EndpointSuffix=core.windows.net"
+BLOB_CONTAINER_NAME = "devdjango01"
 # class views
 
 class PostList(ListView):
@@ -38,10 +40,23 @@ class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Post
     fields = ['title', 'hook_text', 'content', 'head_image', 'file_upload', 'category']
 
+
     def test_func(self):
         return self.request.user.is_superuser or self.request.user.is_staff
 
     def form_valid(self, form):
+
+        #BLOB
+        # if self.request.FILES['head_image']:
+        #     img = self.request.FILES['head_image']
+        #     img_name = "post_head_image_" + str(img) + str(datetime.datetime.now())
+        #     from azure.storage.blob import BlobServiceClient
+        #     blob_service_client = BlobServiceClient.from_connection_string(BLOB_CONNECTION_STRING)
+        #     container_client = blob_service_client.get_container_client(BLOB_CONTAINER_NAME)
+        #     blob_client = container_client.get_blob_client(img_name)
+        #     blob_client.upload_blob(img, blob_type="BlockBlob")
+
+
         current_user = self.request.user
         if current_user.is_authenticated and (current_user.is_staff or current_user.is_superuser):
             form.instance.author = current_user
