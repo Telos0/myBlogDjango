@@ -17,18 +17,23 @@
                     <ul>
                         <li>Work Experience</li>
                         <ul>
-                            <li>LG CNS - 개발/분석/설계 (2019.1 ~)</li>
+                            {% for c in contents_WorkExperience %}
+                                <li>{{ c.content }}</li>
+                            {% endfor %}
                         </ul>
 
                         <li>Education</li>
                         <ul>
-                            <li>이학학사, 수리과학, kaist(2012 ~ 2016)</li>
+                            {% for c in contents_Education %}
+                                <li>{{ c.content }}</li>
+                            {% endfor %}
                         </ul>
 
                         <li>Certificate</li>
                         <ul>
-                            <li>Tensorflow Deverloper Certificate, Google</li>
-                            <li>Azure Fundamental(AZ-900), MS</li>
+                            {% for c in contents_Certificate %}
+                                <li>{{ c.content }}</li>
+                            {% endfor %}
                         </ul>
                     </ul>
                 </div>
